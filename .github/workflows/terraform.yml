@@ -21,8 +21,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Fail
         run: exit 1
-        
+
   terraform:
+    needs: fail
     name: Terraform
     runs-on: ubuntu-latest
     steps:
